@@ -4,7 +4,6 @@ body {
 }
 
 .page {
-    background-color: azure;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -57,7 +56,7 @@ ul {
 
 .header {
     background-color: white;
-    padding: 2% 4%;
+    padding: 20px 30px;
 }
 
 .header-top {
@@ -66,19 +65,20 @@ ul {
     align-items: center;
     gap: 3%;
     font-size: 2rem;
-    margin-bottom: 4%;
+    margin-bottom: 15px;
 }
 
 .search-bar {
     width: 100%;
     border: none;
-    background-color: rgb(230, 230, 230);
+    background-color: #E0E7FF;
     border-radius: 2rem;
     height: 2.5rem;
 }
 
 #main-profile-picture {
-    height: 7rem
+    height: 7rem;
+    width: 7rem;
 }
 
 .header-bottom {
@@ -90,6 +90,7 @@ ul {
 
 .header-bottom img {
     height: 5rem;
+    width: 5rem;
 }
 
 .header-bottom div {
@@ -118,10 +119,10 @@ ul {
 }
 
 .content {
-    background-color: rgb(230, 230, 230);
+    background-color: #E0E7FF;
     display: grid;
     grid-template-columns: 3fr 1.2fr;
-    padding-bottom: 1%;
+    padding-bottom: 20px;
 }
 
 .content-heading {
@@ -131,15 +132,15 @@ ul {
 }
 
 .projects {
-    border: 1px solid black;
     padding-left: 2%;
+    max-height: 720;
 }
 
 .projects-grid {
-    height: 85%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 6%;
+    grid-auto-rows: 200px;
+    gap: 30px;
 }
 
 .project-card {
@@ -147,9 +148,9 @@ ul {
     border-left: solid 8px rgb(3, 197, 155);
     display: grid;
     grid-template-rows: min-content 1fr min-content;
-    padding-top: 4vh;
+    padding-top: 15px;;
     padding-left: 2vw;
-    padding-bottom: 2vh;
+    padding-bottom: 5px;
     padding-right: 2vw;
 }
 
@@ -160,6 +161,10 @@ ul {
 .project-description {
     font-size: 1.3rem;
     color: rgb(78, 78, 78);
+    display: -webkit-box;
+    max-height: 100px;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
@@ -176,9 +181,9 @@ ul {
 .social {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    max-height: 722px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 96%;
 }
 
 
@@ -192,6 +197,19 @@ ul {
     grid-template-rows: 1fr 1fr 1fr;
     background-color: white;
     padding: 10% 10%;
+    gap: 10%;
+}
+
+.announcement-title {
+    font-size: 1.2rem;
+}
+
+.announcement-text {
+    color: rgb(78, 78, 78);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .bottom-social {
@@ -216,6 +234,7 @@ ul {
 
 .trend img {
     height: 3rem;
+    max-width: 3rem;
     justify-self: center;
 }
 
@@ -228,3 +247,15 @@ ul {
     color: rgb(78, 78, 78);
 }
 
+.project-card,
+.announcement-section,
+.trend-section {
+    border-radius: 8px;
+}
+
+.project-card,
+.announcement-section,
+.trend-section,
+.header {
+    box-shadow: 3px 5px 5px #A5B4FC;
+}
